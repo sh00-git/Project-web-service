@@ -1,0 +1,14 @@
+
+<h3>신고일 : {{data.report_date}} 
+    <br>
+    주소 : {{data.gu}} {{data.dong}} {{data.detail_address}} 
+    <br>
+    유형 : {{data.category}} 
+    <br>
+    조치소요기간 예측일 : {{data.pred[0]}}일
+    <br>
+    <br>
+    {% if data.pred[0]==0 %}
+    해당 신고 건은 당일 조치될 예정입니다.
+    {% endif %}
+</h3>

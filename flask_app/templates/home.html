@@ -1,0 +1,37 @@
+<head>
+    <title>전동킥보드 견인 기간 예측</title>
+</head>
+<center>
+<h2>신고날짜 및 주소와 유형을 선택하여 제출해주세요</h2>
+
+<html>
+<body>
+    <form method="POST", action="{{url_for('predict')}}">
+    <input type="text", name='report_date', placeholder="신고일">
+    <br>
+    <input type="text", name='gu', placeholder="구정보">
+    <input type="text", name='dong', placeholder="동정보">
+    <input type="text", name='detail_address', placeholder="상세주소">
+    <br>
+    <select name="category">
+        <option value="none">--유형선택--</option>
+        <option value="점자블록, 엘리베이터 입구">점자블록, 엘리베이터 입구</option>
+        <option value="보도 중앙">보도 중앙</option>
+        <option value="버스정류장, 택시 승강장">버스정류장, 택시 승강장</option>
+        <option value="보도와 차도가 구분된 도로의 차도">보도와 차도가 구분된 도로의 차도</option>
+        <option value="횡단보도, 산책로 등">횡단보도, 산책로 등</option>
+        <option value="건물, 상가 보행자 진출입">건물, 상가 보행자 진출입</option>
+        <option value="소방시설 5m 이내 구역">소방시설 5m 이내 구역</option>
+        <option value="육교위, 지하보차도 안">육교위, 지하보차도 안</option>
+        <option value="자전거 도로">자전거 도로</option>
+        <option value="지하철역 진출입로 및 주변">지하철역 진출입로 및 주변</option>
+        <option value="턱을 낮춘 진출입로">턱을 낮춘 진출입로</option>
+        <option value="통행제한 구간">통행제한 구간</option>
+        <option value="계단, 난간">계단, 난간</option>
+        <option value="기타">기타</option>
+    </select>
+        <input type="submit">
+    </form>
+</body>
+</html>
+</center>
